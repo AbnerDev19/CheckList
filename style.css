@@ -222,3 +222,58 @@ input[type="checkbox"] {
     color: var(--text-muted);
     font-size: 0.9rem;
 }
+/* Responsividade para dispositivos móveis */
+@media (max-width: 600px) {
+    body {
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+    }
+
+    /* Abas com rolagem horizontal caso falte espaço */
+    .tabs {
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 4px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .tab-btn {
+        padding: 8px;
+        font-size: 0.95rem;
+    }
+
+    /* Formulário empilhado para facilitar o toque na tela */
+    #equipment-form {
+        flex-direction: column;
+        padding: 12px;
+    }
+
+    input[type="text"], 
+    select, 
+    button[type="submit"] {
+        width: 100%;
+        min-width: 100%;
+    }
+
+    /* Ajuste nos itens da lista para não quebrarem o layout */
+    .item-details {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .item-badges {
+        flex-wrap: wrap;
+    }
+
+    .delete-btn {
+        padding: 8px;
+    }
+}
