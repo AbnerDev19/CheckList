@@ -1,3 +1,22 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getFirestore, collection, addDoc, updateDoc, doc, deleteDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyABu6AbsWN_IHKdaUP5y0t1u9aTxgRR6l8",
+    authDomain: "check-8ea15.firebaseapp.com",
+    projectId: "check-8ea15",
+    storageBucket: "check-8ea15.firebasestorage.app",
+    messagingSenderId: "922868309929",
+    appId: "1:922868309929:web:66f27bbce8493849b22eb8",
+    measurementId: "G-7407JREWHE"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+const equipmentCollection = collection(db, "equipments");
+
+// ... restante da lógica da equipe e das abas que geramos anteriormente
+
 // Dados Iniciais (Carregados caso o localStorage esteja vazio)
 const defaultTeam = [
     { id: 1, name: "Matheus Rodrigues", role: "Líder Mídia" },
