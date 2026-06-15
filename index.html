@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist AV | Notion Style</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Checklist de Equipamentos</h1>
+            <p class="subtitle">Controle de sonorização, mídia e equipe.</p>
+        </header>
+
+        <nav class="tabs">
+            <button class="tab-btn active" data-tab="midia">Mídia</button>
+            <button class="tab-btn" data-tab="som">Som</button>
+            <button class="tab-btn" data-tab="equipe">Equipe</button>
+        </nav>
+
+        <section class="add-item-section" id="form-section">
+            <form id="equipment-form">
+                <input type="text" id="eq-name" placeholder="Novo equipamento ou cabo..." required>
+
+                <select id="eq-category">
+                    <option value="midia">Mídia</option>
+                    <option value="som">Som</option>
+                </select>
+
+                <select id="eq-status">
+                    <option value="temos">Temos</option>
+                    <option value="precisamos">Precisamos</option>
+                </select>
+
+                <select id="eq-person">
+                    <option value="">Sem responsável</option>
+                    </select>
+
+                <button type="submit">Adicionar</button>
+            </form>
+        </section>
+
+        <section class="content-section">
+            <div id="midia" class="tab-content active">
+                <ul class="checklist" id="list-midia"></ul>
+            </div>
+
+            <div id="som" class="tab-content">
+                <ul class="checklist" id="list-som"></ul>
+            </div>
+
+            <div id="equipe" class="tab-content">
+                <ul class="team-list" id="list-equipe"></ul>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
